@@ -1,0 +1,1 @@
+console.log("Creating a server that listens for communication from the client");
