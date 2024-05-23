@@ -54,6 +54,8 @@ the server will now send an HTML response with formatted content.*/
 //   server.listen(port, hostname, () => {
 //     console.log(`Server running at http://${hostname}:${port}/`);
 //   });
+
+
 //Part 5: Open Exploration
 
 //Create at least two different routes for your application using Node.js. 
@@ -102,3 +104,37 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
+
+
+//Create a server and routes:
+
+// const http = require('http');
+
+// http
+//   .createServer((request, response) => {
+//     console.log(`A ${request.method} request was made at ${request.url}`);
+//     response.statusCode = 200;
+//     response.setHeader('Content-Type', 'text/html');
+
+//     switch (request.url) {
+//       case '/':
+//         response.write('Hello World!');
+//         break;
+
+//       case '/test':
+//         response.write('You have reached the /test endpoint');
+//         break;
+
+//       default:
+//         response.statusCode = 404;
+//         response.write('Error: 404 Not Found');
+//         break;
+//     }
+
+//     response.end(); //the end method is called on the response object to finish the response. 
+//                      //This method must be called on every response to complete the request-response cycle.
+//   })
+
+//   .listen(3000, () => {
+//     console.log('Server running on port: 3000. You better go catch it!');
+//   });
